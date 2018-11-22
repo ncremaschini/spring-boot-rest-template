@@ -1,2 +1,2 @@
-# spring-boot-rest-template
+# spring boo rest - template project
 multi module maven project exposing rest service using spring boot
