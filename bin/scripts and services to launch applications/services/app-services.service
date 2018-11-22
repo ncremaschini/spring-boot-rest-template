@@ -1,0 +1,10 @@
+[Unit]
+Description = launch services application with external configuration files.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /path/to/script/app-services.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy = multi-user.target

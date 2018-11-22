@@ -1,0 +1,8 @@
+/target/
+/target-environments/
+/.classpath
+/.settings
+/.mvn
+/mvn*
+/.project
+/${sys:LOG_FILE_PATH}/*.*

@@ -1,0 +1,35 @@
+Create system service in Unix
+
+$ sudo cd /lib/systemd/system/
+$ sudo nano <service-name>.service
+$ sudo chmod 644 <service-name>.service
+
+Insert:
+
+[Unit]
+Description = launch jar and external config files.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash <path-bash-script>/launch_jar.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy = multi-user.target
+
+Save it and exit.
+
+If service file changes reload daemon:
+$ systemctl daemon-reload
+
+Enable a system service to start at bootup:
+$ sudo systemctl enable <service-name>.service
+
+Disable system service autostart, runs:
+$ sudo systemctl disable <service-name>.service
+
+Start/Stop/Restart/Status service:
+$ systemctl start <service-name>.service
+$ systemctl stop <service-name>.service
+$ systemctl restart <service-name>.service
+$ systemctl status <service-name>.service
